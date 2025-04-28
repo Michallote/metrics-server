@@ -1,0 +1,5 @@
+version: 1.0.0
+databases:
+  - database_name: Starter Postgres
+    sqlalchemy_uri: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    extra: '{"metadata_params": {}, "engine_params": {}, "metadata_cache_timeout": {}, "schemas_allowed_for_csv_upload": []}'

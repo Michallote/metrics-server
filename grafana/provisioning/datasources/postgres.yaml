@@ -1,0 +1,14 @@
+# grafana/provisioning/datasources/postgres.yaml
+apiVersion: 1
+datasources:
+  - name: Postgres
+    type: postgres
+    uid: postgres_ds
+    url: ${DS_POSTGRES_HOST}
+    user: ${DS_POSTGRES_USER}
+    secureJsonData:
+      password: ${DS_POSTGRES_PASSWORD}
+    jsonData:
+      database: ${DS_POSTGRES_DB}
+      sslmode: "disable"        # ← avoids TLS error message
+      postgresVersion: 1600
